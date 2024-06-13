@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Customers Database</title>
+
+  <!-- CSS, Bootstrap and Ajax -->
+  <link href="assignment-04.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- Customer Search First Name-->
+  <div class="custSearch container-sm">
+    <div class="search-customer">
+      <h3>Customer Search</h3>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="searchInput" placeholder="Example John">
+        <button class="btn btn-primary" type="button" id="searchBtn">Search</button>
+      </div>
+      <div id="custDetails"></div>
+    </div>
+  </div>
+  <hr />
+
+  <!-- Using bootstrap below for searching name, adding new cust, updating and deleting -->
+  <!--Adding a New Customer -->
+  <div class="AddNewCust container-sm">
+    <h4>Add New Customer</h4>
+    <button id="addCustBtn" class="btn btn-primary">Add New Customer</button>
+    <div id="customerForm" style="display: none;">
+      <form method="POST" action="/create">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input type="text" id="title" class="form-control" />
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" class="form-control" placeholder="Required" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="surname">Surname:</label>
+              <input type="text" id="surname" class="form-control" placeholder="Required" />
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="mobile">Mobile:</label>
+              <input type="text" id="mobile" class="form-control" placeholder="Required" />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="emailAddress">Email Address:</label>
+          <input type="text" id="emailAddress" class="form-control" placeholder="Required" />
+        </div>
+
+
+
+        <div class="form-group">
+          <h5>Shipping Address</h5>
+          <label for="shippingAddressLine1">Address Line 1:</label>
+          <input type="text" id="shippingAddressLine1" class="form-control" placeholder="Required" />
+
+        </div>
+        <div class="form-group">
+          <label for="shippingAddressLine2">Address Line 2:</label>
+          <input type="text" id="shippingAddressLine2" class="form-control" />
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="shippingTown">Town:</label>
+              <input type="text" id="shippingTown" class="form-control" placeholder="Required" />
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="shippingCountyCity">County/City:</label>
+              <input type="text" id="shippingCountyCity" class="form-control" placeholder="Required" />
+
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="shippingEircode">Eircode:</label>
+          <input type="text" id="shippingEircode" class="form-control" />
+        </div>
+
+
+        <div class="form-group">
+          <h5>Home Address</h5>
+          <label for="homeAddressLine1">Address Line 1:</label>
+          <input type="text" id="homeAddressLine1" class="form-control" placeholder="Required" />
+        </div>
+        <div class="form-group">
+          <label for="homeAddressLine2">Address Line 2:</label>
+          <input type="text" id="homeAddressLine2" class="form-control" />
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="homeTown">Town:</label>
+              <input type="text" id="homeTown" class="form-control" placeholder="Required" />
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="homeCountyCity">County/City:</label>
+              <input type="text" id="homeCountyCity" class="form-control" placeholder="Required" />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="homeEircode">Eircode:</label>
+          <input type="text" id="homeEircode" class="form-control" />
+        </div>
+
+        <button type="submit" id="submitCust" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    <div id="addNewCustDetails"></div>
+  </div>
+  <hr />
+
+  <!-- Updating a Customer -->
+  <div class="updateCust container-sm">
+    <h4>Update Info</h4>
+    <input type="text" id="updateInput" placeholder="Enter user ID " class="form-control" />
+    <button id="searchCustID" class="btn btn-primary">Search CustID</button>
+    <div id="updDetails" contenteditable="true"></div>
+    <button id="saveChanges" class="btn btn-success" style="display: none;">Save Changes</button>
+  </div>
+  <hr />
+
+
+  <!-- Deleting a Customer -->
+  <div class="deleteCust container-sm">
+    <h4>Delete Customer</h4>
+    <button id="searchToDelete" class="btn btn-primary">SearchCustomer</button>
+    <div id="deleteCust" style="display: none;">
+      <div class="form-group">
+        <label for="deleteEmail">Email:</label>
+        <input type="text" id="deleteEmail" placeholder="Enter Email" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="deletePhone">Mobile:</label>
+        <input type="text" id="deletePhone" placeholder="Enter Phone" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="deleteName">Name:</label>
+        <input type="text" id="deleteName" placeholder="Enter Name" class="form-control" />
+      </div>
+
+      <button id="deleteBtn" class="btn btn-primary">Delete Customer</button>
+      <div id="deleteDetails"></div>
+    </div>
+  </div>
+  <hr />
+  <script src="assignment-04.js"></script>
+</body>
+
+</html>
+<!-- References
+    ----- Installed (npm install mysql express, ----  node app.js ------ http://localhost:3000/)
+    ----- https://www.youtube.com/watch?v=u96rVINbAUI&ab_channel=WebDevSimplified
+    ----- https://www.youtube.com/watch?v=9LQ9rGoGfYQ&ab_channel=BroCode
+    ----- https://www.youtube.com/watch?v=wzdCpJY6Y4c&ab_channel=BoostMyTool
+    ----- https://www.youtube.com/watch?v=bnW1forz4Sw&ab_channel=BoostMyTool
+    ----- https://www.youtube.com/watch?v=0pAwU88Bmfo&ab_channel=JohnKeating
+    ----- https://www.youtube.com/watch?v=g7iWCdWJdE0&ab_channel=JohnKeating
+    ----- https://www.youtube.com/watch?v=Wslw-XNlacY&ab_channel=JohnKeating
+    ----- https://www.youtube.com/watch?v=UWEJhbAeGtU&ab_channel=JohnKeating
+    ----- https://www.youtube.com/watch?v=bmIUrmy0ag4&ab_channel=JohnKeating
+    ----- https://getbootstrap.com/docs/5.0/layout/containers/
+    ----- https://getbootstrap.com/docs/4.0/components/forms/
+    -----
+
+-------->

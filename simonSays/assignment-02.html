@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta />
+    <title>Simon Game</title>
+    <!-- References 
+      ---- https://www.youtube.com/watch?v=W0MxUHlZo6U&ab_channel=WebDevCody
+      ---- https://www.youtube.com/watch?v=ooJ-yr9j-D4&t=44s&ab_channel=BeaufortTek
+      ---- https://www.youtube.com/watch?v=SSNjxpSuAgw&ab_channel=CodingSpot
+      ---- https://www.youtube.com/results?search_query=simon+game+javascript 
+      ---- https://www.programiz.com/javascript/setInterval
+      ---- https://www.programiz.com/javascript/setTimeout
+      ---- https://www.w3schools.com/jsref/jsref_indexof_array.asp
+      ---- Used Google Chrome for Testing
+      ----
+      ---->
+     <!-- Importing the CSS file, and the Orbitron font from Google -->
+    <link href="assignment-02.css" rel="stylesheet" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="circlesGame active">
+      <div class="blackCircle"></div>
+      <button class="panel greenCircle"></button>
+      <button class="panel redCircle"></button>
+      <button class="panel yellowCircle"></button>
+      <button class="panel blueCircle"></button>
+    </div>
+    
+    <div class="displayResults" id="displayResults">
+      <div id="highScore">00</div>
+      <button id="start" >Start</button>
+      <div id="currentScore">00</div>
+      <div id="flashRedGreen"></div>
+    </div>
+    
+    <!-- Importing JavaScript file-->
+    <script src="assignment-02.js"></script> 
+  </body>
+</html>

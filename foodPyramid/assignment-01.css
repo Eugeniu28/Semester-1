@@ -1,0 +1,144 @@
+body{
+  background-color: #efefef;
+}
+/* To center the pyramid */
+.shape{
+  margin:auto;
+}
+/*Creating the shape triangle*/
+.triangle{
+  width: 0px;
+  height: 0px;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 120px solid red;
+  margin-bottom: 10px;
+}
+/*Creating a Trapezoid Shape*/
+.trapezoid-one{
+  border-bottom: 70px solid orange;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  height: 0;
+  width: 255px;
+  margin-bottom: 10px;
+}
+.trapezoid-two{
+  border-bottom: 70px solid yellow;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  height: 0;
+  width: 410px;
+}
+.trapezoid-three{
+  border-bottom: 70px solid blue;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  height: 0;
+  width: 550px;
+}
+.trapezoid-four{
+  border-bottom: 70px solid rgb(116, 43, 43);
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  height: 0;
+  width: 690px;
+}
+.trapezoid-five{
+  border-bottom: 70px solid rgb(27, 187, 54);
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  height: 0;
+  width: 830px;
+}
+/* Styling the buttons in the triangle in the center */
+.triangle-button{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: -60px;
+}
+
+/*Creating all buttons as for Pyramid*/
+.addMinus{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: grey;
+  border: 1px solid black;
+  font-weight: bold;
+  color: white;
+  margin-top: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.display{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  background-color: grey;
+  border: 1px solid;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid black;
+  color: white;
+  margin-top: 10px;
+}
+.wrap-button:hover button {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Centering the buttons for all Trapezoids */
+.wrap-button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+}
+.description {
+  font-size: large;
+  text-align: center;
+  font-weight: bold;
+}
+
+#myTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.todayDate {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#dateInput {
+  font-weight: bold;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.saveButton {
+  width: 160px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #2f2f2f;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 40px;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+.savedResults {
+  font-weight: bold;
+  text-align: center;
+}

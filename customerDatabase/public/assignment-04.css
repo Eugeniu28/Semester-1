@@ -1,0 +1,38 @@
+/* Styling the customer Search, and table retrieval */
+.custSearch {
+  text-align: center;
+}
+#custDetails {
+  text-align: left;
+}
+
+#custDetails table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#custDetails th,
+#custDetails td {
+  text-align: left;
+  padding: 3px;
+  margin: 0;
+}
+
+#custDetails th {
+  background-color: #9a98e6;
+}
+#custDetails tr:hover {
+  background-color: #9ce969;
+}
+
+/* Styling the other CRUD methods adding, updating, deleting*/
+.AddNewCust {
+  margin-top: 30px;
+  text-align: left;
+}
+.updateCust {
+  margin-top: 30px;
+}
+.deleteCust {
+  margin-top: 30px;
+}

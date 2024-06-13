@@ -1,0 +1,118 @@
+/* Styling all 5 circles*/
+.circlesGame{
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content:center;
+  padding: 20px;
+}
+.blackCircle{
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  margin-top: 100px; 
+  background-color: black;
+  border: 7px solid black;
+}
+.greenCircle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #5fc011;
+  border: 6px solid black;
+  margin-top: -220px; 
+  margin-left: -170px;
+}
+.redCircle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #df0601;
+  border: 7px solid black;
+  margin-left: 170px;
+  margin-top: -100px;
+}
+.yellowCircle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fbb32a;
+  border: 7px solid black;
+  margin-left: -170px;
+  margin-top: 60px;
+}
+.blueCircle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #2b7be3;
+  border: 7px solid black;
+  margin-left: 170px;
+  margin-top: -100px;
+}
+/* Styling the cursor when the user hovers the mouse, and active is used in Javascript to flashWhite */
+.panel{
+  display: inline-block;
+  cursor: pointer;
+}
+.panel:hover{
+  box-shadow: inset 0px 0px 20px cyan;
+  box-sizing: border-box;
+}
+.active{
+  background-color:white;
+}
+
+/*Styling the start buttons, highScore,prevScore*/
+#start,#highScore,#currentScore { 
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #808080;
+  text-align: center;
+  background-color: #D3D3D3;
+}
+/*Aligning the items in the center*/
+.displayResults{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*Create a small Rectangle around HighScore and CurrentScore*/
+#highScore,#currentScore {
+  width: 30px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+
+}
+#start{
+  width: 60px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  position: absolute;
+}
+#flashRedGreen{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  position: fixed;
+  top: 240px;
+  left: 50%; 
+  transform: translate(-50%,-50%);
+}
+/*Seperating each item and put it in Black Circle*/
+#highScore{
+  margin-top: -160px; 
+  margin-left: -100px;
+}
+#currentScore {
+  margin-top: -25px; 
+  margin-left: 100px; 
+}
+#start{
+  margin-top: -160px; 
+}

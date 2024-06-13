@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+    padding: 0;
+}
+/* Styling the border */
+.studentGrades{
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+#tableTitle{
+  text-align: center;
+}
+/* Styling the table as a Whole */
+.studentTableResults {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+/* Styling the table headings */
+.mainTableHead {
+  background-color: grey;
+  color: black;
+  text-align: center;
+}
+
+.mainTh,
+.mainTd {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.mainTh {
+  text-align: center;
+}
+
+/* Styling the other row colors */
+.studentTableResults tbody tr:nth-child(even) {
+  background-color: rgb(185, 184, 184);
+}
+.studentTableResults tbody tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+/* Styling the text below the Table Headings*/
+.sName,
+sID {
+  text-align: left;
+}
+.grade,
+.average, .finalGrade {
+  text-align: right;
+}
+/* Buttons Style */
+#addRow, #addColumn,#save, #restore{
+  display: block;
+  margin: 10px auto;
+  padding: 5px 12px;
+  background-color: #482ce7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

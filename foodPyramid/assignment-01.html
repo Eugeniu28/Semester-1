@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Food Pyramid</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="assignment-01.css">
+  </head>
+  <body>
+   
+    <!-- Shape Triangle -->
+    <div id="foodPyramid"></div>
+    <div class="shape triangle">
+      <div class="triangle-button">
+        <div class="wrap-button">
+          <button class="plus addMinus">+</button>
+          <input value="2" class="display treats-fats"/>
+          <button class="minus addMinus">-</button>
+        </div>
+      </div>
+    </div>
+    <!-- Shapes for TrapeZoid -->
+    <div class="shape trapezoid-one">
+      <div class="wrap-button">
+        <button class="plus addMinus">+</button>
+        <input value="4" class="display fats-oils" />
+        <button class="minus addMinus">-</button>
+      </div>
+    </div>
+    <div class="shape trapezoid-two">
+      
+      <div class="wrap-button">
+        <button class="plus addMinus">+</button>
+        <input value="3" class="display meat-fish" />
+        <button class="minus addMinus">-</button>
+      </div>
+    </div>
+    <div class="shape trapezoid-three">
+
+      <div class="wrap-button">
+        <button class="plus addMinus">+</button>
+        <input value="3" class="display diary-milk" />
+        <button class="minus addMinus">-</button>
+      </div>
+    </div>
+    <div class="shape trapezoid-four">
+      <div class="wrap-button">
+        <button class="plus addMinus">+</button>
+        <input value="4" class="display bread-potatoe" />
+        <button class="minus addMinus">-</button>
+      </div>
+    </div>
+    <div class="shape trapezoid-five">
+      <div class="wrap-button">
+        <button class="plus addMinus">+</button>
+        <input value="6" class="display fruit-veg" />
+        <button class="minus addMinus">-</button>
+      </div>
+    </div>
+    <!-- Saving Results, Displaying Results and Date-->
+    <div class="description">
+      <p id="myTitle">My Food Pyramid</p>
+      <div id="showDate"></div>
+      <!-- <label for="todayDate" class="todayDate">Choose Date:</label> <input type="date" id="dateInput" <div id="displayDate"></div>/> -->
+      <button class="saveButton">Save Choices</button>
+      <p class="savedResults">Here Are Your Results For Today</p>
+      <div id="resultsDisplay"></div>
+    </div>
+    <!-- JavaScript File -->
+    <script src="assignment-01.js" ></script>
+  </body>
+</html>

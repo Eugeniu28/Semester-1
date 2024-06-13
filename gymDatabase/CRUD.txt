@@ -1,0 +1,118 @@
+CRUD METHODS BELOW
+
+1. SEARCH - Member / Class / Member-Class Info 
+
+    app.get http://localhost:3000/member
+
+    - to find member details you need to search by following JSON format
+    {
+    "MemberID": 3
+    }
+
+
+    app.get http://localhost:3000/class
+    - for class it only retrieves a limit of 10 classes and returns a json file results
+    
+
+    app.get http://localhost:3000/memberClassInfo
+
+    -for this it returns a random Member-Class Info
+
+
+2. CREATE - Member / Class / Member-Class Info 
+
+    app.post http://localhost:3000/create/member
+   {
+    "Title": "Mrs",
+    "FirstName": "Emily",
+    "LastName": "Bloggs",
+    "EmailAddress": "Emily.Bloggs@example.com",
+    "PremiumMemberShip": false
+    }
+
+
+    app.post http://localhost:3000/create/class
+    {
+    "ClassName": "Boxing",
+    "ClassDay": "Monday",
+    "SessionLength": 2,
+    "Price": 50,
+    "CurrentMembers": 10
+    }
+
+    app.post http://localhost:3000/create/memberClassInfo
+    {
+    "MemberID": 4,
+    "ClassesTaken": [
+        {
+            "ClassID": "1"
+        },
+        {
+            "ClassID": "2"
+        },
+        {
+            "ClassID": "3"
+        }
+    ]
+    }
+
+
+
+3. UPDATE - Member / Class / Member-Class Info 
+
+    app.post  http://localhost:3000/update/member
+
+    {   
+    "MemberID": 1,
+    "Title": "Mrs",
+    "FirstName": "Jennifer",
+    "LastName": "Bloggs",
+    "EmailAddress": "Jennifer.Bloggs@example.com",
+    "PremiumMemberShip": true
+    }
+
+    app.post  http://localhost:3000/update/class
+
+    {   
+    "ClassID": 2,
+    "ClassName": "Boxing",
+    "ClassDay": "Tuesday",
+    "SessionLength": 2,
+    "Price": 40,
+    "CurrentMembers": 14
+    }
+
+    
+    app.post  http://localhost:3000/update/memberClassInfo
+
+    {
+    "MemberID": 2,
+    "CurrentClasses": [
+        { "ClassID": 1 },
+        { "ClassID": 4},
+        { "ClassID": 3 }
+        ]
+    }
+
+
+
+4. DELETE - Member / Class / Member-Class Info
+
+app.delete http://localhost:3000/delete/member
+
+{   
+    "MemberID": 2,
+    "FirstName": "Emily",
+    "LastName": "Bloggs",
+    "EmailAddress": "Emily.Bloggs@example.com"
+}
+
+
+app.delete http://localhost:3000/delete/class 
+
+{
+    "ClassID": 2,
+    "ClassName": "Cardio"
+}
+
+

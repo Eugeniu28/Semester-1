@@ -1,0 +1,13 @@
+1. Create MongoDB Atlas cluster on the cloud.
+    - npm install mongodb express body-parser
+
+    - database user: eugeniuporubin18 password: 7Y3JxuhQ3XrGdKg4
+
+    - Installed vscode MongoDB extension Connect with Connection String: mongodb+srv://eugeniuporubin18:7Y3JxuhQ3XrGdKg4@cluster0.vf3zkok.mongodb.net/
+
+
+2. Created a database called gym in MongoDB Atlas with 3 collections gymMember, gymClass, memberClassInfo
+   - to start server run command in terminal: node assignment-06.js
+   - Find commands in CRUD.txt to run commands in POSTMAN 
+   
+

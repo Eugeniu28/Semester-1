@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!------ References: https://www.w3schools.com/html/html_tables.asp
+        ---- https://www.youtube.com/watch?v=4h0XwqCD7Gs&ab_channel=FaizulOsman
+        ---- https://www.w3schools.com/tags/att_global_contenteditable.asp
+        ---- https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
+        ---- https://www.redips.net/javascript/adding-table-rows-and-columns/#:~:text=With%20insertRow()%20method%20you,columns%20in%20the%20HTML%20table.
+        ----
+      ----->
+    <title>Student Grades</title>
+    <link rel="stylesheet" href="assignment-03.css" />
+  </head>
+  <body>
+    <!--Creating our Table Contents-->
+    <div class="studentGrades">
+      <h2 id="tableTitle">Student Grades Table</h2>
+      <table class="studentTableResults">
+      <thead class="mainTableHead">
+        <tr>
+      <th class="mainTh studentName">Student Name</th>
+      <th class="mainTh studentID">Student ID</th>
+      <th class="mainTh Assignment">Assignment 1</th>
+      <th class="mainTh Assignment">Assignment 2</th>
+      <th class="mainTh Assignment">Assignment 3</th>
+      <th class="mainTh Assignment">Assignment 4</th>
+      <th class="mainTh Assignment">Assignment 5</th>
+      <th class="mainTh Average">Average (%)</th>
+      <th class="mainTh finalGradeBtn">Final Grade</th>
+    </tr>
+      </thead>
+        <tbody>
+          <tr>
+          <td contenteditable="true" class="mainTd sName">-</td>
+          <td contenteditable="true" class="mainTd sID">-</td>
+          <td contenteditable="true" class="mainTd grade">-</td>
+          <td contenteditable="true" class="mainTd grade">-</td>
+          <td contenteditable="true" class="mainTd grade">-</td>
+          <td contenteditable="true" class="mainTd grade">-</td>
+          <td contenteditable="true" class="mainTd grade">-</td>
+          <td class="mainTd average">-</td>
+          <td class="mainTd finalGrade"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="addRow">Add Row</button>
+    <button id="addColumn">Add Column</button>
+    <button id="save">Save Results</button>
+    <button id="restore">Restore Last Save</button>
+    <div id="unsubmittedAssignments"></div>
+  </div>
+  </form>
+    <script src="assignment-03.js"></script>
+  </body>
+</html>
